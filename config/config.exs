@@ -28,3 +28,7 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :hive_node,
+  node_name: System.get_env("HIVE_NODE_NAME") |> String.to_atom,
+  cookie: System.get_env("HIVE_COOKIE") |> String.to_atom
